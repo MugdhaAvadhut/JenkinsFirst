@@ -7,7 +7,7 @@ pipeline{
     
     stage('Message'){
       steps{
-          echo "This is first pipeline"
+          bash Hello.sh
       }
     }
     stage('Deployment status'){
