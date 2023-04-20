@@ -1,9 +1,14 @@
 pipeline {
     agent none
     stages {
-        stage('build') {
+        stage('permission') {
             steps {
-                bash Hello.sh
+                chmod 777 Hello.sh
+            }
+            stage('build') {
+            steps {
+                sh Hello.sh
+                }
             }
         }
     }
