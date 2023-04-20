@@ -1,19 +1,10 @@
-pipeline{
-  agent{label ''}
-  options{
-    buildDiscarder(logRotator(numToKeepStr:'10'))
-}
-  stages {
-    
-    stage('Message'){
-      steps{
-          bash Hello.sh
-      }
+pipeline {
+    agent { label 'main' }
+    stages {
+        stage('build') {
+            steps {
+                bash hello.sh
+            }
+        }
     }
-    stage('Deployment status'){
-      steps{
-          echo "Success"
-      }
-    }
-  }
 }
