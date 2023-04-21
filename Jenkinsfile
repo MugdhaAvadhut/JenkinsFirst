@@ -13,7 +13,7 @@ pipeline {
          }
             stage('Permission') {
             steps {
-                sudo chmod 777 'Hello.sh'
+                sudo chmod 777 Hello.sh
                  }
             }
          stage('Script') {
