@@ -13,7 +13,7 @@ pipeline {
          }
          stage('Script') {
             steps {
-                sh '/home/ubuntu/scripts/Hello.sh'
+                sh 'Hello.sh'
                  }
             }
         stage('Deployment Complete'){
