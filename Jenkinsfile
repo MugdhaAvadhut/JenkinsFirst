@@ -13,7 +13,7 @@ pipeline {
          }
          stage('Script') {
             steps {
-                sh 'Hello.sh'
+                sh '/var/lib/jenkins/workspace/Hello/Hello.sh'
                  }
             }
         stage('Deployment Complete'){
