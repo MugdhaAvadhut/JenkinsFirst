@@ -1,15 +1,26 @@
 pipeline {
-    agent none
+    agent {label ''}
+    options{
+        buildDiscarder{logRotator(numToKeepStr:'10'))
+           }
+        
     stages {
-        stage('permission') {
+        
+        stage('Message') {
             steps {
-                chmod 777 Hello.sh
+                echo "This is Jenkins"
             }
-            stage('build') {
+         }
+            stage('Script') {
             steps {
-                sh Hello.sh
+                sh 'Hello.sh'
                 }
             }
+        stage('Deployment Complete'){
+            steps{
+                echo"Successfull"
+                }
+             }
         }
     }
 }
