@@ -1,7 +1,7 @@
 pipeline {
     agent {label ''}
-    options{
-        buildDiscarder{logRotator(numToKeepStr:'10')}
+    options {
+        buildDiscarder(logRotator(numToKeepStr:'10'))
            }
         
     stages {
@@ -14,7 +14,9 @@ pipeline {
             stage('Script') {
             steps {
                 chmod 777 'Hello.sh'
-                sh 'Hello.sh'
+                }
+             steps {
+                 sh 'Hello.sh'
                 }
             }
         stage('Deployment Complete'){
