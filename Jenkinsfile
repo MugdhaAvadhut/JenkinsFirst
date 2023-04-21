@@ -14,7 +14,7 @@ pipeline {
          }
          stage('Script') {
             steps {
-                sudo chmod 777 'Hello.sh
+                sudo chmod 777 'Hello.sh'
                  }
              steps {
                 sh '/var/lib/jenkins/workspace/Hello/Hello.sh
