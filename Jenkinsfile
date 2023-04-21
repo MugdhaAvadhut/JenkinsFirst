@@ -10,12 +10,13 @@ pipeline {
             steps {
                 echo "This is Jenkins"
             }
-            
-         }
-         stage('Script') {
-            steps {
+        }
+            stage('Permission') {
+                steps {
                 sudo chmod 777 'Hello.sh'
                  }
+        }
+         stage('Script') {
              steps {
                 sh '/var/lib/jenkins/workspace/Hello/Hello.sh'
                  }
