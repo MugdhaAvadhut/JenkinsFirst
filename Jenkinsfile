@@ -11,11 +11,6 @@ pipeline {
                 echo "This is Jenkins"
             }
          }
-            stage('Permission') {
-            steps {
-                sudo chmod 777 Hello.sh
-                 }
-            }
          stage('Script') {
             steps {
                 sh 'Hello.sh'
