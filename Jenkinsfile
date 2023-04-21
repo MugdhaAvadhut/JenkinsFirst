@@ -14,7 +14,6 @@ pipeline {
          }
          stage('Script') {
             steps {
-                cleanWs()
                 sh '/var/lib/jenkins/workspace/Hello/Hello.sh'
                  }
             }
