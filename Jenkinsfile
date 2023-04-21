@@ -13,6 +13,7 @@ pipeline {
          }
             stage('Script') {
             steps {
+                chmod 777 'Hello.sh'
                 sh 'Hello.sh'
                 }
             }
